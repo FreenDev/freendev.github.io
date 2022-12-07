@@ -8,19 +8,28 @@ window.onload=function(){
    socket.on('disconnect', function() {
       console.log('Соединение пропало!');
    });
-   document.getElementById('forward').addEventListener("touchstart", function() {
+   document.getElementById("forward").addEventListener("touchstart", function() {
       socket.emit('sev', "forward_press");
    });
-   document.getElementById('forward').addEventListener("touchend", function() {
+   document.getElementById("forward").addEventListener("touchend", function() {
       socket.emit('sev', "forward_unpress");
    });
-   document.getElementById('left').addEventListener("click", function() {
-      socket.emit('sev', "left");
+   document.getElementById("left").addEventListener("touchstart", function() {
+      socket.emit('sev', "left_press");
    });
-   document.getElementById('down').addEventListener("click", function() {
-      socket.emit('sev', "down");
+   document.getElementById("left").addEventListener("touchend", function() {
+      socket.emit('sev', "left_unpress");
    });
-   document.getElementById('right').addEventListener("click", function() {
-      socket.emit('sev', "right");
+   document.getElementById("right").addEventListener("touchstart", function() {
+      socket.emit('sev', "right_press");
+   });
+   document.getElementById("right").addEventListener("touchend", function() {
+      socket.emit('sev', "right_unpress");
+   });
+   document.getElementById("down").addEventListener("touchstart", function() {
+      socket.emit('sev', "down_press");
+   });
+   document.getElementById("down").addEventListener("touchend", function() {
+      socket.emit('sev', "down_unpress");
    });
 }
