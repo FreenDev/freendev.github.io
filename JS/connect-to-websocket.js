@@ -11,4 +11,13 @@ window.onload=function(){
    document.getElementById('forward').addEventListener("click", function() {
       socket.emit('sev', "forward");
    });
+   document.getElementById('left').addEventListener("click", function() {
+      socket.emit('sev', "left");
+   });
+   document.getElementById('down').addEventListener("click", function() {
+      socket.emit('sev', "down");
+   });
+   document.getElementById('right').addEventListener("click", function() {
+      socket.emit('sev', "right");
+   });
 }

@@ -2,10 +2,19 @@
 <head>
 	<meta charset="utf-8">
 	<title>тест websocket да</title>
+	<style>
+		.left,.down,.right{float.left;margin:0 10px;}
+	</style>
 	<script src="JS/connect-to-websocket.js"></script>
 </head>
 <body>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.1/socket.io.js" defer></script>
-	<button id="forward">w</button>
+	<input type="text" id="text_in_message">
+	<button id="forward">W</button>
+	<div class="control">
+		<div class="left"><button id="left">A</button></div>
+		<div class="down"><button id="down">S</button></div>
+		<div class="right"><button id="right">D</button></div>
+	</div>
 </body>
 </html>
