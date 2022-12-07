@@ -1,6 +1,6 @@
 var socket;
 window.onload=function(){
-   socket=io.connect("https://b22e-136-169-214-0.eu.ngrok.io");
+   socket=io.connect("https://f621-136-169-214-0.eu.ngrok.io");
    socket.on('connect', function() {
       socket.emit('cev', 'Android');
       console.log("Соединение есть!");
