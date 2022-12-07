@@ -8,8 +8,11 @@ window.onload=function(){
    socket.on('disconnect', function() {
       console.log('Соединение пропало!');
    });
-   document.getElementById('forward').addEventListener("click", function() {
-      socket.emit('sev', "forward");
+   document.getElementById('forward').addEventListener("mousedown", function() {
+      socket.emit('sev', "forward_press");
+   });
+   document.getElementById('forward').addEventListener("mouseup", function() {
+      socket.emit('sev', "forward_unpress");
    });
    document.getElementById('left').addEventListener("click", function() {
       socket.emit('sev', "left");
